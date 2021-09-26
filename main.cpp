@@ -12,7 +12,11 @@ int main() {
             auto g = double(j) / (image_height - 1);
             auto b = .25;
 
-            int ir;
+            int ir = static_cast<int> (255.999 * r);
+            int ig = static_cast<int> (255.999 * g);
+            int ib = static_cast<int> (255.999 * b);
+
+            std::cout << ir << ' ' << ig << ' ' << ib << '\n';
         }
     }
 }
